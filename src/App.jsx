@@ -1,0 +1,24 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Dashboard from './pages/Dashboard'
+import Pisciculture from './pages/Pisciculture'
+import Cuniculture from './pages/Cuniculture'
+import Agrotourisme from './pages/Agrotourisme'
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <div className="min-h-screen bg-gray-100">
+        <Navbar />
+        <main className="max-w-4xl mx-auto p-4">
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/pisciculture" element={<Pisciculture />} />
+            <Route path="/cuniculture" element={<Cuniculture />} />
+            <Route path="/agrotourisme" element={<Agrotourisme />} />
+          </Routes>
+        </main>
+      </div>
+    </BrowserRouter>
+  )
+}
